@@ -12,7 +12,6 @@ def encrypt_aes(raw, key):
     ciphertext = cipher.encrypt(padded_raw)
     return base64.b64encode(iv + ciphertext)
 
-
 def decrypt_aes(enc, key):
     enc = base64.b64decode(enc)
     iv = enc[:AES.block_size]
